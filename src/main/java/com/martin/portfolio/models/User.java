@@ -32,6 +32,10 @@ public class User {
     @Size(max = 120)
     private String password;
 
+    @NotBlank
+    @Size(max = 120)
+    private String Role;
+
 
     public User() {
     }
@@ -41,6 +45,14 @@ public class User {
         this.email = email;
         this.password = password;
 
+    }
+
+    public String getRole() {
+        return Role;
+    }
+
+    public void setRole(String role) {
+        Role = role;
     }
 
     public Long getId() {

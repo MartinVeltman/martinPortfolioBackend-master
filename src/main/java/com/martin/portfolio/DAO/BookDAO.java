@@ -21,8 +21,7 @@ public class BookDAO {
         bookRepository.save(book);
     }
 
-    public List<Book> getBooksByTitle(String title){
-        System.out.println("tester");
+    public List<Book> getBooksByTitle(String title) {
         return (List<Book>) bookRepository.findBooksByTitle(title);
     }
 }

@@ -60,34 +60,16 @@ public class UserController {
         return ResponseEntity.ok(new JwtResponse(jwt));
     }
 
-//    @PostMapping("/user/signup")
-//    public ResponseEntity<?> registerUser(@Valid @RequestBody SignupRequest signUpRequest) {
-//        if (userService.usernameAlreadyExists(signUpRequest)) {
-//            return ResponseEntity
-//                    .badRequest()
-//                    .body(MessageResponse.generateResponse("Error: Username is already taken!",
-//                            HttpStatus.BAD_REQUEST, null));
-//        }
-//        if (userService.emailAlreadyExists(signUpRequest)) {
-//            return ResponseEntity
-//                    .badRequest()
-//                    .body(MessageResponse.generateResponse("Error: Email is already in use!",
-//                            HttpStatus.BAD_REQUEST, null));
-//        }
-//
-//        User user = new User(signUpRequest.getUsername(),
-//                signUpRequest.getEmail(),
-//                encoder.encode(signUpRequest.getPassword()));
-//
-//
-//        user.setMoneySpend(0);
-//        Set<Role> roles = new HashSet<>();
-//        roles.add(roleService.setUserRole());
-//        user.setRoles(roles);
-//
-//        userService.saveUser(user);
-//        return MessageResponse.generateResponse("Account succesvol aangemaakt", HttpStatus.OK, null);
-//    }
+    @PostMapping("/user/signup")
+    public ResponseEntity<?> registerUser(@Valid @RequestBody SignupRequest signUpRequest) {
+
+        User user = new User(signUpRequest.getUsername(),
+                signUpRequest.getEmail(),
+                encoder.encode(signUpRequest.getPassword()));
+        user.setRole("ADMIN");
+        userService.saveUser(user);
+        return MessageResponse.generateResponse("Account succesvol aangemaakt", HttpStatus.OK, null);
+    }
 
 
 }

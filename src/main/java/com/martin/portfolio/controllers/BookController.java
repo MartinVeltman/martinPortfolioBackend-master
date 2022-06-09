@@ -34,11 +34,11 @@ public class BookController {
 
     @GetMapping("/getBooksByTitle")
     @ResponseBody
-    public Object getBookByTitle() {
+    public Object getBookByTitle(@RequestParam String title) {
         try {
-            return bookService.getBooksByTitle("johan de vries");
+            return bookService.getBooksByTitle(title);
         } catch (Exception e) {
-            return MessageResponse.generateResponse("An error has occurred: " + e, HttpStatus.BAD_REQUEST, null);
+            return e.getMessage();
         }
     }
 
