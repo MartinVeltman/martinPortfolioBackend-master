@@ -20,10 +20,10 @@ public class Book {
     @Column
     private String autor;
 
-    @Column
+    @Column(columnDefinition = "TEXT")
     private String description;
 
-    @Column
+    @Column(columnDefinition = "TEXT")
     private String review;
 
     @Column
