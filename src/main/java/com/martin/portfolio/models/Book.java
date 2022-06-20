@@ -1,7 +1,6 @@
 package com.martin.portfolio.models;
 
 import javax.persistence.*;
-import javax.validation.constraints.NotBlank;
 
 @Entity
 @Table(name = "Books")

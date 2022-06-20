@@ -1,7 +1,7 @@
 package com.martin.portfolio.controllers;
 
 import com.github.lambdaexpression.annotation.EnableRequestBodyParam;
-import com.github.lambdaexpression.annotation.RequestBodyParam;
+
 import com.martin.portfolio.models.User;
 import com.martin.portfolio.payload.request.LoginRequest;
 import com.martin.portfolio.payload.request.SignupRequest;
@@ -10,8 +10,6 @@ import com.martin.portfolio.payload.response.MessageResponse;
 import com.martin.portfolio.security.jwt.AuthTokenFilter;
 import com.martin.portfolio.security.jwt.JwtUtils;
 import com.martin.portfolio.services.UserService;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -21,11 +19,7 @@ import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.*;
-
-import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
-import java.util.HashSet;
-import java.util.Set;
 
 @CrossOrigin(origins = "*", maxAge = 3600)
 @RestController
@@ -47,7 +41,6 @@ public class UserController {
     @Autowired
     UserService userService;
 
-    private static final Logger logger = LoggerFactory.getLogger(AuthTokenFilter.class);
 
     @PostMapping("/user/signin")
     public ResponseEntity<?> authenticateUser(@Valid @RequestBody LoginRequest loginRequest) {
