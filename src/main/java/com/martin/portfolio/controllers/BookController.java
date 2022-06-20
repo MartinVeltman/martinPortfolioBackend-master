@@ -16,7 +16,7 @@ public class BookController {
     @Autowired
     BookService bookService;
 
-    @PostMapping("/createBook")
+    @PostMapping("/addBook")
     public ResponseEntity<?> addBook(@RequestBody Book book) {
         bookService.addBook(book);
         return MessageResponse.generateResponse("Item succesvol toegevoegd", HttpStatus.OK, null);

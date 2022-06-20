@@ -15,12 +15,49 @@ public class Project {
     @NotBlank
     private String title;
 
-    private String imagePath;
+    private String githubLink;
 
-    private String autor;
+    private Integer buildYear;
 
     private String description;
 
-    private String review;
+    public Integer getId() {
+        return id;
+    }
 
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public String getGithubLink() {
+        return githubLink;
+    }
+
+    public void setGithubLink(String githubLink) {
+        this.githubLink = githubLink;
+    }
+
+    public Integer getBuildYear() {
+        return buildYear;
+    }
+
+    public void setBuildYear(Integer buildYear) {
+        this.buildYear = buildYear;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
 }
