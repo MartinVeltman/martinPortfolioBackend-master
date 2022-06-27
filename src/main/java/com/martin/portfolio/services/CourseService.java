@@ -23,4 +23,8 @@ public class CourseService {
     public void addCourse(Course course) {
         courseDAO.addCourse(course);
     }
+
+    public void deleteCourse(Long courseId){
+        courseDAO.deleteCourse(courseId);
+    }
 }

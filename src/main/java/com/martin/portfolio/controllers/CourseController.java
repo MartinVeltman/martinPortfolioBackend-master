@@ -33,4 +33,12 @@ public class CourseController {
             return MessageResponse.generateResponse("An error has occurred: " + e, HttpStatus.BAD_REQUEST, null);
         }
     }
+
+
+    @DeleteMapping("/delete/{id}")
+    public ResponseEntity<?> deleteCourseById(@PathVariable Long id) {
+        courseService.deleteCourse(id);
+        return MessageResponse.generateResponse("Item succesvol verwijderd", HttpStatus.OK, null);
+    }
+
 }

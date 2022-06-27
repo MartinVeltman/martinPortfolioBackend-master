@@ -20,4 +20,8 @@ public class CourseDAO {
     public void addCourse(Course course) {
         courseRepository.save(course);
     }
+
+    public void deleteCourse(Long courseId){
+        courseRepository.deleteById(courseId);
+    }
 }

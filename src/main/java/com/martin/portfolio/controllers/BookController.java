@@ -42,13 +42,10 @@ public class BookController {
         }
     }
 
-    @DeleteMapping("/delete")
-    public void deleteBook(RequestParam Long id){
-        try {
-            bookService.deleteBook(id);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+    @DeleteMapping("/delete/{id}")
+    public ResponseEntity<?> deleteBookById(@PathVariable Long id) {
+        bookService.deleteBook(id);
+        return MessageResponse.generateResponse("Item succesvol verwijderd", HttpStatus.OK, null);
     }
 
 }

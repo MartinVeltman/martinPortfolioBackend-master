@@ -31,4 +31,10 @@ public class ProjectController {
             return MessageResponse.generateResponse("An error has occurred: " + e, HttpStatus.BAD_REQUEST, null);
         }
     }
+
+    @DeleteMapping("/delete/{id}")
+    public ResponseEntity<?> deleteProjectById(@PathVariable Long id) {
+        projectService.deleteProject(id);
+        return MessageResponse.generateResponse("Item succesvol verwijderd", HttpStatus.OK, null);
+    }
 }

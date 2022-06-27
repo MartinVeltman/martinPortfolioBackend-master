@@ -19,4 +19,8 @@ public class ProjectDAO {
     public void addProject(Project project) {
         projectRepository.save(project);
     }
+
+    public void deleteProject(Long projectId){
+        projectRepository.deleteById(projectId);
+    }
 }
