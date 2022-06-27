@@ -42,4 +42,13 @@ public class BookController {
         }
     }
 
+    @DeleteMapping("/delete")
+    public void deleteBook(RequestParam Long id){
+        try {
+            bookService.deleteBook(id);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
 }

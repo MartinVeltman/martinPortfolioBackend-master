@@ -27,4 +27,8 @@ public class BookService {
     public List<Book> getBooksByTitle(String title){
         return (List<Book>) bookDAO.getBooksByTitle(title);
     }
+
+    public void deleteBook(Long bookId){
+        bookDAO.deleteBook(bookId);
+    }
 }

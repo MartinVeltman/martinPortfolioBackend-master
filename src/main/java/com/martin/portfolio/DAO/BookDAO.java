@@ -24,4 +24,8 @@ public class BookDAO {
     public List<Book> getBooksByTitle(String title) {
         return (List<Book>) bookRepository.findBooksByTitle(title);
     }
+
+    public void deleteBook(Long bookId){
+        bookRepository.deleteById(bookId);
+    }
 }
