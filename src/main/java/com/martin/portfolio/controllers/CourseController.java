@@ -1,6 +1,5 @@
 package com.martin.portfolio.controllers;
 
-import com.martin.portfolio.models.Book;
 import com.martin.portfolio.models.Course;
 import com.martin.portfolio.payload.response.MessageResponse;
 import com.martin.portfolio.services.CourseService;
@@ -19,7 +18,6 @@ public class CourseController {
 
     @PostMapping("/addCourse")
     public ResponseEntity<?> addCourse(@RequestBody Course course) {
-        System.out.println(course.getImagePath());
         courseService.addCourse(course);
         return MessageResponse.generateResponse("Item succesvol toegevoegd", HttpStatus.OK, null);
     }
@@ -33,7 +31,6 @@ public class CourseController {
             return MessageResponse.generateResponse("An error has occurred: " + e, HttpStatus.BAD_REQUEST, null);
         }
     }
-
 
     @DeleteMapping("/delete/{id}")
     public ResponseEntity<?> deleteCourseById(@PathVariable Long id) {

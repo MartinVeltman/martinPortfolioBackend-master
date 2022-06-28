@@ -23,7 +23,7 @@ public class ProjectService {
         projectDAO.addProject(project);
     }
 
-    public void deleteProject(Long projectId){
+    public void deleteProject(Long projectId) {
         projectDAO.deleteProject(projectId);
     }
 }

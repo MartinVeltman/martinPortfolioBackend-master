@@ -21,7 +21,7 @@ public class CourseDAO {
         courseRepository.save(course);
     }
 
-    public void deleteCourse(Long courseId){
+    public void deleteCourse(Long courseId) {
         courseRepository.deleteById(courseId);
     }
 }

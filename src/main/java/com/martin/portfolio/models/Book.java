@@ -14,10 +14,10 @@ public class Book {
     private String title;
 
     @Column
-    private String imagePath;
+    private String imageUrl;
 
     @Column
-    private String autor;
+    private String author;
 
     @Column(columnDefinition = "TEXT")
     private String description;
@@ -44,20 +44,13 @@ public class Book {
         this.title = title;
     }
 
-    public String getImagePath() {
-        return imagePath;
+
+    public String getImageUrl() {
+        return imageUrl;
     }
 
-    public void setImagePath(String imagePath) {
-        this.imagePath = imagePath;
-    }
-
-    public String getAutor() {
-        return autor;
-    }
-
-    public void setAutor(String autor) {
-        this.autor = autor;
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
     }
 
     public String getDescription() {
@@ -82,5 +75,13 @@ public class Book {
 
     public void setReleaseYear(String releaseYear) {
         this.releaseYear = releaseYear;
+    }
+
+    public String getAuthor() {
+        return author;
+    }
+
+    public void setAuthor(String author) {
+        this.author = author;
     }
 }

@@ -1,7 +1,6 @@
 package com.martin.portfolio.controllers;
 
 import com.github.lambdaexpression.annotation.EnableRequestBodyParam;
-
 import com.martin.portfolio.models.User;
 import com.martin.portfolio.payload.request.LoginRequest;
 import com.martin.portfolio.payload.request.SignupRequest;
@@ -19,6 +18,7 @@ import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.*;
+
 import javax.validation.Valid;
 
 @CrossOrigin(origins = "*", maxAge = 3600)

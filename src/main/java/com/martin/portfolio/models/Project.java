@@ -2,7 +2,6 @@ package com.martin.portfolio.models;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
-import java.util.Date;
 
 @Entity
 @Table(name = "Projects")
@@ -20,6 +19,8 @@ public class Project {
     private Integer buildYear;
 
     private String description;
+
+    private String imageUrl;
 
     public Long getId() {
         return id;
@@ -59,5 +60,13 @@ public class Project {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public String getImageUrl() {
+        return imageUrl;
+    }
+
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
     }
 }

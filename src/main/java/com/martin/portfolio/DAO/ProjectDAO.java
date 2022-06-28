@@ -4,6 +4,7 @@ import com.martin.portfolio.models.Project;
 import com.martin.portfolio.repository.ProjectRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+
 import java.util.List;
 
 @Component
@@ -20,7 +21,7 @@ public class ProjectDAO {
         projectRepository.save(project);
     }
 
-    public void deleteProject(Long projectId){
+    public void deleteProject(Long projectId) {
         projectRepository.deleteById(projectId);
     }
 }

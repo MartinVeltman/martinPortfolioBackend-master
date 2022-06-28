@@ -1,7 +1,6 @@
 package com.martin.portfolio.services;
 
 import com.martin.portfolio.DAO.CourseDAO;
-import com.martin.portfolio.models.Book;
 import com.martin.portfolio.models.Course;
 import org.springframework.stereotype.Service;
 
@@ -24,7 +23,7 @@ public class CourseService {
         courseDAO.addCourse(course);
     }
 
-    public void deleteCourse(Long courseId){
+    public void deleteCourse(Long courseId) {
         courseDAO.deleteCourse(courseId);
     }
 }

@@ -27,19 +27,19 @@ public class UserDAO {
         return user;
     }
 
-    public void saveUser(User user){
+    public void saveUser(User user) {
         userRepository.save(user);
     }
 
-    public Boolean usernameAlreadyExists(SignupRequest signUpRequest){
-        if(userRepository.existsByUsername(signUpRequest.getUsername())){
-           return true;
+    public Boolean usernameAlreadyExists(SignupRequest signUpRequest) {
+        if (userRepository.existsByUsername(signUpRequest.getUsername())) {
+            return true;
         }
         return false;
     }
 
-    public Boolean emailAlreadyExists(SignupRequest signUpRequest){
-        if(userRepository.existsByEmail(signUpRequest.getEmail())){
+    public Boolean emailAlreadyExists(SignupRequest signUpRequest) {
+        if (userRepository.existsByEmail(signUpRequest.getEmail())) {
             return true;
         }
         return false;

@@ -16,7 +16,7 @@ public class Course {
     private String title;
 
     @Column
-    private String imagePath;
+    private String imageUrl;
 
     @Column
     private String instructor;
@@ -46,12 +46,12 @@ public class Course {
         this.title = title;
     }
 
-    public String getImagePath() {
-        return imagePath;
+    public String getImageUrl() {
+        return imageUrl;
     }
 
-    public void setImagePath(String imagePath) {
-        this.imagePath = imagePath;
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
     }
 
     public String getInstructor() {

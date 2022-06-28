@@ -24,11 +24,11 @@ public class BookService {
         bookDAO.addBook(book);
     }
 
-    public List<Book> getBooksByTitle(String title){
-        return (List<Book>) bookDAO.getBooksByTitle(title);
+    public List<Book> getBooksByTitle(String title) {
+        return bookDAO.getBooksByTitle(title);
     }
 
-    public void deleteBook(Long bookId){
+    public void deleteBook(Long bookId) {
         bookDAO.deleteBook(bookId);
     }
 }
